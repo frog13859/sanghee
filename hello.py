@@ -8,7 +8,7 @@ from scipy import signal
 st.title("조상희")
 st.header("202221016")
 
-#단위계단응답
+#단위계단응답1
 G1 = control.TransferFunction([100],[1,5,6])
 G2 = control.feedback(G1)
 st.write(G2)
