@@ -6,3 +6,4 @@ sympy
 scipy
 matplotlib
 signal
+scipy signal
