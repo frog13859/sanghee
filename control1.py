@@ -67,5 +67,4 @@ for sys,_,color in zip(systems, labels, colors):
   plt.semilogx(w, phase, color=color)
 plt.ylabel('Phase [degrees]')
 plt.xlabel('Frequency [Hz]')
-plt.show()
 st.pyplot(fig2)
