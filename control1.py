@@ -1,16 +1,16 @@
 import streamlit as st
-import control
 import numpy as np
-from scipy.signal import lti, step
+import control
 import matplotlib.pyplot as plt
 from scipy import signal
+from scipy.signal import lti, step
 
 st.title("조상희")
 st.header("202221016")
 
 #전달 함수 정의
-G = control.TransferFunction([100],[1,5,6])
 
+G = control.TransferFunction([100],[1,5,6])
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
