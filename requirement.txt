@@ -2,8 +2,6 @@ streamlit
 control
 pandas
 numpy
-sympy
 scipy
 matplotlib
-signal
-scipy signal
+
