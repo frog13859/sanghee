@@ -1,9 +1,9 @@
 import streamlit as st
-import numpy as np
 import control
+import numpy as np
+from scipy.signal import lti, step
 import matplotlib.pyplot as plt
 from scipy import signal
-from scipy.signal import lti, step
 
 st.title("조상희")
 st.header("202221016")
@@ -24,16 +24,17 @@ den = [1,5,106]
 system = signal.TransferFunction(num,den)
 
 #단위 계단 응답
-t, y=step(system)
+t,y=step(system)
 
 #그래프 그리기: 단위 계단 응답
 fig = plt.figure()
 plt.figure()
-plt.plot(t, y)
+plt.plot(t,y)
 plt.xlabel('Time(s)')
 plt.ylabel('Response')
 plt.title('Step Response of H(s) =100/ (s + 2)* (s + 3)')
 plt.grid(True)
+plt.show()
 st.pyplot(fig)
 
 G0 = signal.lti([100],[1])
@@ -69,7 +70,6 @@ plt.ylabel('Phase [degrees]')
 plt.xlabel('Frequency [Hz]')
 plt.show()
 st.pyplot(fig2)
-
 
 
 #import control <---- control.py 같으면 안댐 module불러올때 헷갈려서 내뱉는 오류인듯 
