@@ -2,7 +2,6 @@ import streamlit as st
 import control
 from scipy import signal
 from scipy.signal import lti, step
-import matplotlib
 import matplotlib.pyplot as plt
 
 
