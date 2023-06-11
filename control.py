@@ -1,27 +1,30 @@
 import streamlit as st
-from scipy import signal
+import control
+import numpy as np
 from scipy.signal import lti, step
 import matplotlib.pyplot as plt
-import numpy as np
+from scipy import signal
 
 st.title("조상희")
 st.header("202221016")
 
+#전달 함수 정의
+G = control.TransferFunction([100],[1,5,6])
 
+# 폐루프 전달함수 계산
+G1 = control.feedback(G)
 
-st.write("Transfer Function G(s):")
-
-
+st.write("TransferFunction G(s):")
+st.write(G1)
 
 
 #단위 계산 응답
 num = [100]
 den = [1,5,106]
-
 system = signal.TransferFunction(num,den)
 
 #단위 계단 응답
-t,y=signal.step(system)
+t,y=step(system)
 
 #그래프 그리기: 단위 계단 응답
 fig = plt.figure()
