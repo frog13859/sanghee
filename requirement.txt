@@ -1,7 +1,7 @@
 streamlit
+control
 pandas
 numpy
 sympy
 scipy
 matplotlib
-control
