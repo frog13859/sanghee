@@ -34,7 +34,6 @@ plt.xlabel('Time(s)')
 plt.ylabel('Response')
 plt.title('Step Response of H(s) =100/ (s + 2)* (s + 3)')
 plt.grid(True)
-plt.show()
 st.pyplot(fig)
 
 G0 = signal.lti([100],[1])
@@ -68,5 +67,4 @@ for sys,_,color in zip(systems, labels, colors):
   plt.semilogx(w, phase, color=color)
 plt.ylabel('Phase [degrees]')
 plt.xlabel('Frequency [Hz]')
-plt.show()
 st.pyplot(fig2)
