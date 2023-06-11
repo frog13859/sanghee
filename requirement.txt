@@ -5,3 +5,4 @@ numpy
 sympy
 scipy
 matplotlib
+signal
