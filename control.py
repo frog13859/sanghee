@@ -13,6 +13,7 @@ st.write("Transfer Function G(s):")
 
 
 
+
 #단위 계산 응답
 num = [100]
 den = [1,5,106]
