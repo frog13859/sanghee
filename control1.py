@@ -24,12 +24,12 @@ den = [1,5,106]
 system = signal.TransferFunction(num,den)
 
 #단위 계단 응답
-t,y=step(system)
+t, y=step(system)
 
 #그래프 그리기: 단위 계단 응답
 fig = plt.figure()
 plt.figure()
-plt.plot(t,y)
+plt.plot(t, y)
 plt.xlabel('Time(s)')
 plt.ylabel('Response')
 plt.title('Step Response of H(s) =100/ (s + 2)* (s + 3)')
@@ -67,4 +67,5 @@ for sys,_,color in zip(systems, labels, colors):
   plt.semilogx(w, phase, color=color)
 plt.ylabel('Phase [degrees]')
 plt.xlabel('Frequency [Hz]')
+plt.show()
 st.pyplot(fig2)
