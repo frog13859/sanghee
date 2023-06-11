@@ -4,21 +4,14 @@ from scipy import signal
 from scipy.signal import lti, step
 import matplotlib.pyplot as plt
 
-
-
 st.title("조상희")
 st.header("202221016")
 
-
-
-#전달 함수 정의
 G = control.TransferFunction([100],[1,5,6])
-
-# 폐루프 전달함수 계산
 G1 = control.feedback(G)
 
-print("Transfer Function G(s):")
-print(G1)
+st.write("Transfer Function G(s):")
+st.write(G1)
 
 
 #단위 계산 응답
