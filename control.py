@@ -1,4 +1,5 @@
 import streamlit as st
+import control
 from scipy import signal
 from scipy.signal import lti, step
 import matplotlib.pyplot as plt
@@ -10,7 +11,7 @@ st.header("202221016")
 
 
 st.write("Transfer Function G(s):")
-
+st.write(G1)
 
 
 #단위 계산 응답
