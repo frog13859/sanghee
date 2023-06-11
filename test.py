@@ -12,11 +12,11 @@ date = st.date_input("날짜를 선택하세요.")
 st.sidebar.header("VS Code And Streamlit, Vs Code And github")
 sidebar_time = st.sidebar.time_input("시간을 설정하세요")
 
-#단위계단응답
-G1 = control.TransferFunction([100],[1,5,6])
-G2 = control.feedback(G1)
-st.write(G2)
+#전달 함수 정의
 
+
+st.write("Transfer Function G(s):")
+st.write(G1)
 
 num = [100]
 den = [1,5,106]
